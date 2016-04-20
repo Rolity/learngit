@@ -1,0 +1,17 @@
+1、从安装包文件夹下安装Git软件，改变安装路径，其余可默认安装
+2、创建版本库
+第一步：首先创建空目录：
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/learngit
+第二步：通过git init命令把这个目录变成Git可以管理的仓库
+$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/
+
+小结：
+
+初始化一个Git仓库，使用git init命令。
+添加文件到Git仓库，分两步：
+第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+第二步，使用命令git commit，-m后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录，完成。

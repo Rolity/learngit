@@ -1,0 +1,27 @@
+远程仓库的建立（连接本地Git版本库和Github仓库）
+
+第一步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+$ ssh-keygen -t rsa -C"870884130@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/R/.ssh/id_rsa):
+Created directory '/c/Users/R/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/R/.ssh/id_rsa.
+Your public key has been saved in /c/Users/R/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:gUgJvHo3CVdqS8MXZK4OBu34KCY2IQkSdFkx0RvpFKw 870884130@qq.com
+The key's randomart image is:
++---[RSA 2048]----+
+|oo.o+BB.o        |
+| ooo.++B         |
+|+ .o.o*.+        |
+|o=o BE.o .       |
+|+o+=.=  S        |
+|o+oo=            |
+|+=....           |
+|= .              |
+|                 |
++----[SHA256]-----+
+
+第二步：登陆GitHub，点击右上角头像->settings->SSH and GPG keys->New SSH key，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。点“Add Key”，你就应该看到已经添加的Key。
